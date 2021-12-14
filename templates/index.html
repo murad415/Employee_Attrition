@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html >
+<body>
+ <div class="login">
+	<h1>Predict Probability of Employee Leaving the organization </h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+	<label for="Ename">Employee Name :</label>
+	<input type="text" name="Employee_Name" ,id='Ename',placeholder="Employee_Name" required="required" /><br><br>
+	<label for="jDate">Joining Date :</label>
+	<input type="date" name="Employee_Joining_Date",id="jDate" placeholder="Employee_Joining_Date" required="required" /><br><br>
+	<label for="dDate">Date of Birth :</label>
+	<input type="date" name="Employee_DOB" ,id='dDate',placeholder="Employee_DOB" required="required" /><br><br>
+	<label for="Gender">Gender :</label>
+	<select name="Gender" ,id="Gender" required="required">
+	<option ></option>
+	<option >Male</option>
+	<option >Female</option>
+	</Select><br></br>
+	<label for="Desig">Designation :</label>
+	<select name="Designation" ,id="Desig" required="required">
+	<option ></option>
+	<option >1</option>
+	<option >2</option>
+	<option >3</option>
+	<option >4</option>
+	<option >5</option>
+	</Select><br></br>
+	<label for="City">City of Posting :</label>
+	<select name="City" ,id="City" required="required">
+	<option ></option>
+	<option >C1</option >
+	<option >C2</option >
+	<option >C3</option >
+	<option >C4</option >
+	<option >C5</option >
+	<option >C6</option >
+	<option >C7</option >
+	<option >C8</option >
+	<option >C9</option >
+	<option >C10</option >
+	<option >C11</option >
+	<option >C12</option >
+	<option >C13</option >
+	<option >C14</option >
+	<option >C15</option >
+	<option >C16</option >
+	<option >C17</option >
+	<option >C18</option >
+	<option >C19</option >
+	<option >C20</option >
+	<option >C21</option >
+	<option >C22</option >
+	<option >C23</option >
+	<option >C24</option >
+	<option >C25</option >
+	<option >C26</option >
+	<option >C27</option >
+	<option >C28</option >
+	<option >C29</option >
+	</Select><br></br>
+	<label for="Salary">Salary :</label>
+	<input type="number" name="Salary" ,id='Salary',placeholder="Salary" required="required",min="1" /><br><br>
+	<label for="last_3M">Last 3 Month Average Rating :</label>
+	<input type="number" name="Last_3_M_Rating" ,id='last_3M',placeholder="last_3M" required="required",step="0.1",min="1" max="5" /><br><br>
+     <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+pandas
+numpy
+# matplotlib
+# sklearn
+# category_encoders
+# xgboost
+# catboost
+# lightgbm
+Joblib
+flask
