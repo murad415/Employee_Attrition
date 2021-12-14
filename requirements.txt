@@ -4,6 +4,8 @@ Jinja2
 MarkupSafe
 Werkzeug
 numpy
+pandas
+datetime
 scikit-learn
 matplotlib
 Joblib
